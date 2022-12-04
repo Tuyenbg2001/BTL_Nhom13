@@ -11,14 +11,6 @@
   $ward_id = $user['ward_id'];
   $city_id = $user['city_id'];
   $district_id = $user['district_id'];
-  $zip_code = $user['zip_code'];
-  $credit_card_name = $user['credit_card_name'];
-  $credit_card_num = $user['credit_card_num'];
-  $exp_month = $user['exp_month'];
-  $exp_year = $user['exp_year'];
-  $cvv_cvc = $user['cvv_cvc'];
-  $updated_at = $user['updated_at'];
-
   $status = session('status');
   Session::put('status',null);
 

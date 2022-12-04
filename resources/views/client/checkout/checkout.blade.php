@@ -11,12 +11,7 @@
   $ward_id = $user['ward_id'];
   $city_id = $user['city_id'];
   $district_id = $user['district_id'];
-  $zip_code = $user['zip_code'];
-  $credit_card_name = $user['credit_card_name'];
-  $credit_card_num = $user['credit_card_num'];
-  $exp_month = $user['exp_month'];
-  $exp_year = $user['exp_year'];
-  $cvv_cvc = $user['cvv_cvc'];
+ 
 ?>
 
 <div class=" checkout row">
@@ -94,10 +89,7 @@
                     </option>
                 </select>
               </div>
-              <div class=" checkout col-50">
-                <label for="zip">Mã vận chuyển Zip</label>
-                <input type="text" id="zip" name="zip_code" value="{{$zip_code}}" placeholder="550000" required>
-              </div>
+              
             </div>
 
           </div>
@@ -105,45 +97,18 @@
           <div class=" checkout col-50">
             <h3>Phương thức thanh toán</h3><hr>
             <div class="row">
-              <div class="col-md-4">
-                <input type="radio" name="payment_method" value="1" onclick="selectPayment1();" required /> Thẻ tín dụng
-              </div>
+              
               <div class="col-md-3">
                 <input type="radio" name="payment_method" value="2" onclick="selectPayment2();" required /> Tiền mặt
               </div>
-              <div class="col-md-5">
-                <input type="radio" name="payment_method" value="3" onclick="selectPayment3();" required /> Cổng thanh toán
-              </div>
+              
             </div><hr>
             <div id="div0">
               <b style="color: red;">Chưa chọn phương thức thanh toán</b>
               <hr>
             </div>
-            <div id="div1" style="display: none;">
-              <b style="color: green;">Đã chọn thanh toán bằng THẺ TÍN DỤNG</b>
-              <hr>
-              <label for="fname">Loại được phép dùng</label>
-              <div class=" checkout icon-container">
-                <i class=" checkout fa fa-cc-visa" style="color:navy;"></i>
-                <i class=" checkout fa fa-cc-amex" style="color:blue;"></i>
-                <i class=" checkout fa fa-cc-mastercard" style="color:red;"></i>
-                <i class=" checkout fa fa-cc-discover" style="color:orange;"></i>
-              </div>
-              <label for="cname">Tên trên thẻ</label>
-              <input type="text" id="cname" name="credit_card_name" value="{{$credit_card_name}}" placeholder="NGUYEN VAN A">
-              <label for="ccnum">Số thẻ tín dụng</label>
-              <input type="text" id="ccnum" name="credit_card_num" value="{{$credit_card_num}}" placeholder="1111-2222-3333-4444">
-              <label for="expmonth">Tháng hết hạn</label>
-              <input type="text" id="expmonth" name="exp_month" value="{{$exp_month}}" placeholder="Tháng 12">
-              <div class=" checkout row">
-                <div class=" checkout col-50">
-                  <label for="expyear">Năm hết hạn</label>
-                  <input type="text" id="expyear" name="exp_year" value="{{$exp_year}}" placeholder="2021">
-                </div>
-                <div class=" checkout col-50">
-                  <label for="cvv_cvc">CVV/CVC</label>
-                  <input type="text" id="cvv_cvc" name="cvv_cvc" value="{{$cvv_cvc}}" placeholder="123">
-                </div>
+            
+              
               </div>
             </div>
             <div id="div2" style="display: none;">
