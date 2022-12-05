@@ -107,13 +107,7 @@ class UserController extends Controller
                 'ward_id' => $user->ward_id,
                 'city_id' => $user->city_id,
                 'district_id' => $user->district_id,
-                'zip_code' => $payment->zip_code,
-                'credit_card_name' => $payment->credit_card_name,
-                'credit_card_num' => $payment->credit_card_num,
-                'exp_month' => $payment->exp_month,
-                'exp_year' => $payment->exp_year,
-                'cvv_cvc' => $payment->cvv_cvc,
-                'updated_at' => $payment->updated_at,
+                
             ]);
 
             // address
@@ -261,13 +255,7 @@ class UserController extends Controller
                 'ward_id' => $user->ward_id,
                 'city_id' => $user->city_id,
                 'district_id' => $user->district_id,
-                'zip_code' => $payment->zip_code,
-                'credit_card_name' => $payment->credit_card_name,
-                'credit_card_num' => $payment->credit_card_num,
-                'exp_month' => $payment->exp_month,
-                'exp_year' => $payment->exp_year,
-                'cvv_cvc' => $payment->cvv_cvc,
-                'updated_at' => $payment->updated_at,
+                
             ]);
 
             // address
