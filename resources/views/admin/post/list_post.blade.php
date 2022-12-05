@@ -33,7 +33,7 @@
                         <th class="text-center">Tình trạng</th>
                         <th class="text-center">Thao tác</th>
                         <th>Đăng lúc</th>
-                        <th>Sửa lần cuối</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -59,7 +59,7 @@
                             <a href="{{URL('/delete-post/'.$post->post_id)}}" onclick="return confirm('Bạn có chắc chắn xóa bài viết này không?')"><button class="btn btn-danger mb-1"><i class="fas fa-trash-alt"></i></button></a>
                         </td>
                         <td>{{ $post->post_created_at}}</td>
-                        <td>{{ $post->post_updated_at}}</td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="post_content">Nội dung bài viết</label>
-                <textarea style="resize: none;" class="form-control" id="editor1" name="post_content" rows="8"></textarea>
+                <textarea style="resize: none;" class="form-control"  name="post_content" rows="8"></textarea>
             </div>
             <div class="form-group">
                 <label for="post_meta_desc">Meta mô tả (SEO)</label>
