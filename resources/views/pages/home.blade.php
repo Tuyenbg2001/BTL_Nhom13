@@ -49,9 +49,7 @@
 </div>
 
 <div class="wrap-banner">
-    <div class="wrap-img text-center">
-        <img src="{{URL('public/client/img/banner1.png')}}" alt="Laptop LT" title="Laptop LT - Thế giới công nghệ">
-    </div>
+    
     <div class="container text-center">
         <div class="title-content">
             <img src="{{URL('public/client/img/dot-title-left.png')}}" alt=""> Laptop LT - Thế giới laptop <img src="{{URL('public/client/img/dot-title-right.png')}}" alt=""></div>

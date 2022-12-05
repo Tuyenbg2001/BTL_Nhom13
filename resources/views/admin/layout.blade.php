@@ -94,7 +94,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{route('user.add')}}">Thêm tài khoản</a>
                         <a class="collapse-item" href="{{route('list.client')}}">Danh sách khách hàng</a>
-                        <a class="collapse-item" href="{{route('list.staff')}}">Danh sách nhân viên</a>
+                        <!-- <a class="collapse-item" href="{{route('list.staff')}}">Danh sách nhân viên</a> -->
                     </div>
                 </div>
             </li>
@@ -145,19 +145,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMessage" aria-expanded="true" aria-controls="collapseMessage">
-                <i class="far fa-envelope"></i>
-                    <span>Thư liên hệ</span>
-                </a>
-                <div id="collapseMessage" class="collapse" aria-labelledby="headingProduct" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Tư vấn, hỏi đáp</a>
-                        <a class="collapse-item" href="utilities-border.html">Báo cáo sự cố</a>
-                        <a class="collapse-item" href="utilities-border.html">Yêu cầu xử lý</a>
-                    </div>
-                </div>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategoriesPost" aria-expanded="true" aria-controls="collapseCategories">
                     <i class="far fa-folder-open"></i>
@@ -181,21 +169,7 @@
                         <a class="collapse-item" href="{{route('post.list')}}">Danh sách bài viết</a>
                     </div>
                 </div>
-            </li>
-            <hr class="sidebar-divider">
-            <div class="sidebar-heading">Cài đặt</div>
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-user"></i>
-                    <span>Thông tin cá nhân</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Mật khẩu và bảo mật</span>
-                </a>
-            </li>
+            </li>           
             <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt"></i>
