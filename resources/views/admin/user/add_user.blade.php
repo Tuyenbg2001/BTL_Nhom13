@@ -31,7 +31,6 @@
                     <div class="col-md-3">
                         <label for="remember_token">Vai trò</label>
                         <select id="remember_token" name="remember_token" class="form-control form-control-sm">
-                            <option value="1">Nhân viên</option>
                             <option value="">Khách hàng</option>
                         </select>
                     </div>
@@ -65,12 +64,16 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
+                        <label for="district">Xã/Phường</label>
+                        <input type="text" class="form-control" id="ward" name="ward_id" placeholder="Xã/Phường...">
+                    </div>
+                    <div class="col-md-6">
                         <label for="district">Quận/Huyện</label>
-                        <input type="text" class="form-control" id="district" name="district" placeholder="Quận/Huyện...">
+                        <input type="text" class="form-control" id="district" name="district_id" placeholder="Xã/Phường...">
                     </div>
                     <div class="col-md-6">
                         <label for="city">Tỉnh/Thành</label>
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Tỉnh/Thành...">
+                        <input type="text" class="form-control" id="city" name="city_id" placeholder="Tỉnh/Thành...">
                     </div>
                 </div>
             </div>

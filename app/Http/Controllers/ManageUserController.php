@@ -44,24 +44,24 @@ class ManageUserController extends Controller
         return view('admin.layout')->with('admin.user.list_clients', $manager_clients);
     }
 
-    public function list_staffs()
-    {
-        $this->AuthLogin();
+    // public function list_staffs()
+    // {
+    //     $this->AuthLogin();
 
-        // address
-        $city = City::orderby('matp', 'ASC')->get();
-        $province = Province::orderby('maqh', 'ASC')->get();
-        $wards = Wards::orderby('xaid', 'ASC')->get();
+    //     // address
+    //     $city = City::orderby('matp', 'ASC')->get();
+    //     $province = Province::orderby('maqh', 'ASC')->get();
+    //     $wards = Wards::orderby('xaid', 'ASC')->get();
         
-        $list_staffs = DB::table('users')->where('remember_token',1)->get();
-        $manager_staffs = view('admin.user.list_staffs')->with('list_staffs', $list_staffs)->with([
-                'city' => $city,
-                'province' => $province,
-                'wards' => $wards,
-                ]);;
+    //     $list_staffs = DB::table('users')->where('remember_token',1)->get();
+    //     $manager_staffs = view('admin.user.list_staffs')->with('list_staffs', $list_staffs)->with([
+    //             'city' => $city,
+    //             'province' => $province,
+    //             'wards' => $wards,
+    //             ]);;
         
-        return view('admin.layout')->with('admin.user.list_staffs', $manager_staffs);
-    }
+    //     return view('admin.layout')->with('admin.user.list_staffs', $manager_staffs);
+    // }
 
     public function lock_user($user_id) {
         $this->AuthLogin();
@@ -97,8 +97,9 @@ class ManageUserController extends Controller
         $data['password'] = md5($request->password);
         $data['phone'] = $request->phone;
         $data['street_address'] = $request->street_address;
-        $data['district'] = $request->district;
-        $data['city'] = $request->city;
+        $data['ward_id'] = $request->ward_id;
+        $data['district_id'] = $request->district_id;
+        $data['city_id'] = $request->city_id;
         $data['status'] = $request->status;
         $data['remember_token'] = $request->remember_token;
         $data['created_at'] = now();
@@ -137,17 +138,12 @@ class ManageUserController extends Controller
                 'email' => $user->email,
                 'phone' => $user->phone,
                 'street_address' => $user->street_address,
-                'city' => $user->city,
-                'district' => $user->district,
+                'ward_id' => $user->ward_id,
+                'city_id' => $user->city_id,
+                'district_id' => $user->district_id,
                 'status' => $user->status,
                 'remember_token' => $user->remember_token,
-                'zip_code' => $payment->zip_code,
-                'credit_card_name' => $payment->credit_card_name,
-                'credit_card_num' => $payment->credit_card_num,
-                'exp_month' => $payment->exp_month,
-                'exp_year' => $payment->exp_year,
-                'cvv_cvc' => $payment->cvv_cvc,
-                'updated_at' => $payment->updated_at,
+               
             ]);
 
         return view('admin.user.update_user');
@@ -162,8 +158,9 @@ class ManageUserController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'street_address' => $request->street_address,
-            'city' => $request->city,
-            'district' => $request->district,
+            'ward_id' => $request->ward_id,
+            'city_id' => $request->city_id,
+            'district_id' => $request->district_id,
             'status' => $request->status,
             'remember_token' => $request->remember_token,
             'updated_at'=> now(),
