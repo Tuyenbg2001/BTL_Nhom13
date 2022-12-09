@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label for="post_desc">Nội dung bài viết</label>
-                <textarea style="resize: none;" class="form-control" id="editor1" name="post_desc" rows="3" placeholder="Mô tả bài viết...">
+                <textarea style="resize: none;" class="form-control" id="editor1" name="post_content" rows="3" placeholder="Mô tả bài viết...">
                     {{$edit_post->post_content}}
                 </textarea>
             </div>

@@ -30,8 +30,8 @@
         <div class="wrapper-top py-1">
             <div class="container">
                 <div class="detail">
-                    <a class="map-top" href="https://goo.gl/maps/zm4MPY3XfUV6NNmN9"><i class="fas fa-map-marker-alt"></i> Địa chỉ: Xuân Phương - Nam Từ Liêm - Hà Nội |</a>
-                    <a href="tel: 0941 547 945"><i class="m-lg-1 fas fa-phone-alt"></i> 037 855 6163546</a>
+                    <a class="map-top" ><i class="fas fa-map-marker-alt"></i> Địa chỉ: Xuân Phương - Nam Từ Liêm - Hà Nội |</a>
+                    <a href="tel: 0941 547 945"><i class="m-lg-1 fas fa-phone-alt"></i> 037 855 6654</a>
                 </div>
                 <div class="social">
                     Social:
@@ -52,7 +52,7 @@
                         <div class="col-md-3 mt-4"><img src="{{URL('public/client/img/icon-phone.png')}}" alt="icon-phone"></div>
                         <div class="col-md-9 mt-3">
                             <a class="item-row1" href="#">Hotline</a><br/>
-                            <a class="item-row2 text-danger" href="tell: 037 855 6163">037 855 6163</a>
+                            <a class="item-row2 text-danger" href="">037 855 6163</a>
                         </div>
                     </div>
                 </div>
@@ -100,45 +100,10 @@
                             </div>
 
                         </div>
-                    </div>   
-                    <div>
-                    @if(session('name'))
-                            <div class="nav-item dropdown subnav-item">
-                                <a class="nav-link" href="" onclick="return false;">{{session('name')}}</a>
-                                <ul class="dropdown-menu subnav">
-                                    <li class="dropdown-item"><a href="{{route('client.info')}}">Thông tin</a></li>
-                                    <li class="dropdown-divider"></li>
-                                    <li class="dropdown-item"><a href="{{route('client.update')}}">Cập nhật</a></li>
-                                    <li class="dropdown-divider"></li>
-                                    <li class="dropdown-item"><a href="{{route('client.logout')}}">Đăng xuất</a></li>
-                                </ul>
-                            </div>
-                        @else
-                            <div class="nav-item dropdown subnav-item">
-                                <a class="nav-link" href="" onclick="return false;">Tài khoản</a>
-                                <ul class="dropdown-menu subnav">
-                                    <li class="dropdown-item"><a href="{{route('client.login')}}">Đăng nhập</a></li>
-                                    <li class="dropdown-divider"></li>
-                                    <li class="dropdown-item"><a href="{{route('client.register')}}">Đăng ký</a></li>
-                                </ul>
-                            </div>
-                        @endif
-                        <div class="nav-item">
-                            <div class="scroll-div" style="display: none;">
-                                @if(Session::get('cart') == true)
-                                <div id="show-cart-qty" class="icon-cart"></div>
-                                @else
-                                <div class="icon-cart">
-                                    <a href="{{url('/gio-hang')}}">
-                                        <span class="num-cart">0</span>
-                                        <img height="30" width="30" src="{{URL('public/client/img/icon-cart1.png')}}" alt="Giỏ hàng">
-                                    </a>
-                                </div>
-                                @endif
-                    </div>               
-                            </div>                  
+                    </div>
+                </div>
             </div>
-        </div>                     
+        </div>
 <div class="row">
     <div class="col-md-12 fixedElement" style=" background-color: #f7ffec;">
         <nav class="container nav-pc">
@@ -164,7 +129,16 @@
                                 <li class="dropdown-divider"></li>
                                 @endforeach
                             </ul>
-                        </li>                                             
+                        </li>
+                        <!-- <li class="nav-item dropdown subnav-item">
+                            <a class="nav-link" href="" onclick="return false;">Quà tặng</a>
+                            <ul class="dropdown-menu subnav">
+                                <li class="dropdown-item"><a href="#">Chuột</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li class="dropdown-item"><a href="#">Balo</a></li>
+                            </ul>
+                        </li> -->
+                        
                         <li class="nav-item dropdown subnav-item">
                             <a class="nav-link" href="" onclick="return false;">Tin tức</a>
                             <ul class="dropdown-menu subnav">
@@ -175,7 +149,41 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/lien-he')}}">Liên hệ</a></li>
-                        
+                        @if(session('name'))
+                            <li class="nav-item dropdown subnav-item">
+                                <a class="nav-link" href="" onclick="return false;">{{session('name')}}</a>
+                                <ul class="dropdown-menu subnav">
+                                    <li class="dropdown-item"><a href="{{route('client.info')}}">Thông tin</a></li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="dropdown-item"><a href="{{route('client.update')}}">Cập nhật</a></li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="dropdown-item"><a href="{{route('client.logout')}}">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+                        @else
+                            <li class="nav-item dropdown subnav-item">
+                                <a class="nav-link" href="" onclick="return false;">Tài khoản</a>
+                                <ul class="dropdown-menu subnav">
+                                    <li class="dropdown-item"><a href="{{route('client.login')}}">Đăng nhập</a></li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="dropdown-item"><a href="{{route('client.register')}}">Đăng ký</a></li>
+                                </ul>
+                            </li>
+                        @endif
+                        <li class="nav-item">
+                            <div class="scroll-div" style="display: none;">
+                                @if(Session::get('cart') == true)
+                                <div id="show-cart-qty" class="icon-cart"></div>
+                                @else
+                                <div class="icon-cart">
+                                    <a href="{{url('/gio-hang')}}">
+                                        <span class="num-cart">0</span>
+                                        <img height="30" width="30" src="{{URL('public/client/img/icon-cart1.png')}}" alt="Giỏ hàng">
+                                    </a>
+                                </div>
+                                @endif
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -355,18 +363,12 @@
                 <div class="row mx-0">
                     <div class="col-md-5">
                         <p>
-                            <a href="{{URL('/')}}"><img class="mb-3 logo-footer" src="{{URL('public/client/img/logoLT-mobile.png')}}" width="250" alt="Laptop LT - Thế giới công nghệ"></a> <br>
-                            <i class="mr-3 fas fa-map-marked-alt"></i>Cơ sở 1 <br>
-                            <span>&emsp;&emsp;<i class="mr-3 fas fa-map-marker-alt"></i>Địa chỉ:<a class="row-bottom-2" href="https://goo.gl/maps/79wo14qfxCXLLs8H6"> Địa chỉ: Xuân Phương - Nam Từ Liêm - Hà Nội</a></span><br>
+                            <a href="{{URL('/')}}"><img class="mb-3 logo-footer" src="{{URL('public/client/img/logoLT-mobile.png')}}" width="250" alt="Laptop LT - Thế giới công nghệ"></a> <br>      
+                            <span>&emsp;&emsp;<i class="mr-3 fas fa-map-marker-alt"></i>Địa chỉ:<a class="row-bottom-2" href="https://goo.gl/maps/79wo14qfxCXLLs8H6">Xuân Phương - Nam Từ Liêm - Hà Nội</a></span><br>
                             <span>&emsp;&emsp;<i class="mr-3 fas fa-phone-alt"></i>Điện thoại:<a class="row-bottom-2" href="tel: 037 855 6163"> 037 855 6163</a></span><br>
                             <span>&emsp;&emsp;<i class="mr-3 fas fa-envelope"></i>Email:<a class="row-bottom-2" href="mailto: pvlinh.20it9@vku.udn.vn"> pvlinh.20it9@vku.udn.vn</a></span>
                         </p>
-                        <p>
-                            <i class="mr-3 fas fa-map-marked-alt"></i>Cơ sở 2 <br>
-                            <span>&emsp;&emsp;<i class="mr-3 fas fa-map-marker-alt"></i>Địa chỉ:<a class="row-bottom-2" href="https://goo.gl/maps/79wo14qfxCXLLs8H6"> Địa chỉ: Xuân Phương - Nam Từ Liêm - Hà Nội</a></span><br>
-                            <span>&emsp;&emsp;<i class="mr-3 fas fa-phone-alt"></i>Điện thoại:<a class="row-bottom-2" href="tel: 0916 190 744"> 0916 190 744</a></span><br>
-                            <span>&emsp;&emsp;<i class="mr-3 fas fa-envelope"></i>Email:<a class="row-bottom-2" href="mailto: httrinh.20it10@vku.udn.vn"> httrinh.20it10@vku.udn.vn</a></span>
-                        </p>
+                       
                     </div>
                     <div class="col-md-4">
                         <div class="title-footer">Quy định - chính sách</div>
@@ -377,7 +379,12 @@
                             <p><a class="row-bottom-2" href="#"><i class="mr-1 fas fa-angle-double-right"></i>Chính sách bảo mật thông tin</a></p>
                         </div>
                         <img src="{{URL('public/client/img/da-thong-bao.png')}}" alt="Đã thông báo" width="184px">
-                    </div>            
+                    </div>
+                    <div class="col-md-3">
+                        <div class="title-footer">Fanpage Facebook</div>
+                        <hr>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flaptoplt%2F&tabs=timeline&width=290&height=140&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="290" height="140" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
                 </div>
                 <div class="row container">
                     <div class="col-md-4 px-4 text-center social-footer">

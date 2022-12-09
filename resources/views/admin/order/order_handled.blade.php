@@ -40,7 +40,7 @@
                         <th>Mã Vận Chuyển</th>
                         <th>Ghi chú</th>
                         <th>Sửa lần cuối</th>
-                        <th class="text-center">Thao tác</th>
+                        <!-- <th class="text-center">Thao tác</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -120,10 +120,10 @@
                                 {{ $order->updated_at}}
                             <?php } ?>
                         </td>
-                        <td class="text-center">
+                        <!-- <td class="text-center">
                             <a href="{{URL('/update-user/'.$order->id)}}"><button class="btn btn-warning mb-1"><i class="fas fa-edit"></i></button></a>
                             <a href="{{URL('/delete-user/'.$order->id)}}" onclick="return confirm('Bạn có chắn chắn xóa tài khoản khách hàng này không?')"><button class="btn btn-danger mb-1"><i class="fas fa-trash-alt"></i></button></a>
-                        </td>
+                        </td> -->
                     </tr>
                     @endforeach
                 </tbody>

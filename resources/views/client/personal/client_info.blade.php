@@ -11,14 +11,7 @@
   $ward_id = $user['ward_id'];
   $city_id = $user['city_id'];
   $district_id = $user['district_id'];
-  $zip_code = $user['zip_code'];
-  $credit_card_name = $user['credit_card_name'];
-  $credit_card_num = $user['credit_card_num'];
-  $exp_month = $user['exp_month'];
-  $exp_year = $user['exp_year'];
-  $cvv_cvc = $user['cvv_cvc'];
-  $updated_at = $user['updated_at'];
-
+  
   $status = session('status');
   Session::put('status',null);
 
@@ -55,7 +48,6 @@
 		            <div class="mt-3">
 		              <h4>{{$name}}</h4>
 		              <p class="text-secondary mb-1">Khách Hàng</p>
-		              <p class="text-muted font-size-sm">{{$city_name}} ({{$zip_code}})</p>
 		              <a class="btn btn-grape col-md-12" href="{{route('client.update')}}">Sửa thông tin</a>
 		            </div>
 		          </div>
@@ -63,34 +55,7 @@
 		      </div>
 
 		      <!-- CREDIT CARD -->
-		      @if($credit_card_name)
-		      <div class="card mt-3">
-		      	<div class="card-header"><b> Thẻ tín dụng</b></div>
-		      	<div class="card-body table-responsive">
-		      		<table class="table table-bordered">
-					  <tbody>
-					    <tr>
-					      <th scope="row">Tên chủ thẻ</th>
-					      <td colspan="2">{{$credit_card_name}}</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">Số thẻ</th>
-					      <td colspan="2">{{$credit_card_num}}</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">CVV/CVC</th>
-					      <td colspan="2">{{$cvv_cvc}}</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">Hết hạn</th>
-					      <td>{{$exp_month}}</td>
-					      <td>{{$exp_year}}</td>
-					    </tr>
-					  </tbody>
-					</table>
-		      	</div>
-		      </div>
-		      @endif
+		      
 
 		      <div class="card mt-3">
 		        <ul class="list-group list-group-flush">
@@ -173,7 +138,7 @@
 		            </div>
 		            <div class="col-sm-9 text-secondary">
 		            	@if($city)
-		              		{{$ward_name}}, {{$district_name}}, {{$city_name}}
+		              		  
 		              	@else
 		              		(Quý khách Chưa cập nhật)
 		              	@endif

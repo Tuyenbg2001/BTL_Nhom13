@@ -86,24 +86,30 @@ class OrderController extends Controller
     public function order_handling($order_id) {
         $this->AuthLogin();
         $customer_id = DB::table('tbl_order')->where('id', $order_id)->first()->customer_id;
-        $name = DB::table('users')->where('id', $customer_id)->first()->name;
+        //$name = DB::table('users')->where('id', $customer_id)->first()->name;
         DB::table('tbl_order')->where('id', $order_id)->update([
                 'order_status'=>'1',
                 'updated_at' => now(),
             ]);
-        return redirect('/order-waiting')->with('message','Đơn hàng có mã ['.$order_id.'] của khách hàng '.$name.' đã được XỬ LÍ vào lúc '.now());
+        return redirect('/order-waiting')->with('message','Đơn hàng có mã ['.$order_id.'] đã được XỬ LÍ vào lúc '.now());
     }
 
     public function order_unhandle($order_id) {
         $this->AuthLogin();
         $customer_id = DB::table('tbl_order')->where('id', $order_id)->first()->customer_id;
-        $name = DB::table('users')->where('id', $customer_id)->first()->name;
+        //$name = DB::table('users')->where('id', $customer_id)->first()->name;
         DB::table('tbl_order')->where('id', $order_id)->update([
                 'order_status'=>'0',
                 'updated_at' => now(),
             ]);
-        return redirect('/order-handled')->with('message','Đơn hàng có mã ['.$order_id.'] của khách hàng '.$name.' đã bị HUỶ xử lí vào lúc '.now());
+        return redirect('/order-handled')->with('message','Đơn hàng có mã ['.$order_id.'] của khách hàng đã bị HUỶ xử lí vào lúc '.now());
     }
-    
 
+    // public function delete_order($order_id) {
+    //     $this->AuthLogin(); //Gọi hàm kiểm tra đăng nhập
+
+    //     DB::table('tbl_order')->where('id',$order_id)->delete();
+
+    //     return back()->with('message','Đã xoá đơn hàng vào lúc '.now());
+    // }
 }

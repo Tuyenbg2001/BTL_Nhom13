@@ -115,8 +115,7 @@
                                 </div>
                             </div>
                         </li>
-                            <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flocalhost%3A81%2Fdo_an_co_so_2%2Fdanh-muc-san-pham%2F24&width=174&layout=button_count&action=like&size=large&share=true&height=46&appId" width="174" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configur" data-width="" data-numposts="20"></div>
+                            
                     </ul>
                                 <hr>
                     <h4><strong> Chi tiết về máy</strong></h4>
@@ -158,14 +157,14 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <p style="font-size: 20px;" class="title-content">Laptop LT</p>
-                            <p>Địa chỉ: <span><a href="https://goo.gl/maps/g7GaF8ViwoCjwUdW6">470 Trần Đại Nghĩa, Q. Ngũ Hành Sơn, Tp. Đà Nẵng</a></span></p>
+                            <p>Địa chỉ: <span><a href="https://www.google.com/maps/place/Xu%C3%A2n+Ph%C6%B0%C6%A1ng,+Nam+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0402417,105.7250338,14z/data=!3m1!4b1!4m5!3m4!1s0x3134548cc813331b:0x9c7e53e5b23f1a5c!8m2!3d21.0378383!4d105.7439194?hl=vi">Xuân Phương - Nam Từ Liêm - Hà Nội</a></span></p>
                             <p>Hotline: <span><a href="tel: 037 855 6163">037 855 6163 -</a><a href="tel: 0916 190 744"> 0916 190 744</a></span></p>
                             <p>Email: <span><a href="mailto: pvlinh.20it9@vku.udn.vn">pvlinh.20it9@vku.udn.vn</a></span></p>
                             <p>Fanpage: <span><a href="https://www.facebook.com/laptoplt/">Công ty Laptop LT</a></span></p>
                             <p>Website: <span><a href="#">Laptop LT</a></span></p>
                         </div>
                         <div class="col-sm-12 col-md-6 text-center">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.8845962337627!2d108.25107529333566!3d15.97470262095603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4!5e1!3m2!1svi!2s!4v1634551700603!5m2!1svi!2s"
+                            <iframe src="https://www.google.com/maps/place/Xu%C3%A2n+Ph%C6%B0%C6%A1ng,+Nam+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0402417,105.7250338,14z/data=!3m1!4b1!4m5!3m4!1s0x3134548cc813331b:0x9c7e53e5b23f1a5c!8m2!3d21.0378383!4d105.7439194?hl=vi"
                                 width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>

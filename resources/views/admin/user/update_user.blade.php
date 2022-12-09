@@ -8,16 +8,12 @@
   $email = $user['email'];
   $phone = $user['phone'];
   $street_address = $user['street_address'];
-  $city = $user['city'];
-  $district = $user['district'];
+  $ward_id = $user['ward_id'];
+  $city_id = $user['city_id'];
+  $district_id = $user['district_id'];
   $status = $user['status'];
   $remember_token = $user['remember_token'];
-  $zip_code = $user['zip_code'];
-  $credit_card_name = $user['credit_card_name'];
-  $credit_card_num = $user['credit_card_num'];
-  $exp_month = $user['exp_month'];
-  $exp_year = $user['exp_year'];
-  $cvv_cvc = $user['cvv_cvc'];
+  
 ?>
 
 
@@ -95,12 +91,16 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
+                        <label for="ward">Xã/Phường</label>
+                        <input type="text" class="form-control" id="ward" name="ward_id" placeholder="Xã/Phường..." value="{{$ward_id}}">
+                    </div>
+                    <div class="col-md-6">
                         <label for="district">Quận/Huyện</label>
-                        <input type="text" class="form-control" id="district" name="district" placeholder="Quận/Huyện..." value="{{$district}}">
+                        <input type="text" class="form-control" id="district" name="district_id" placeholder="Quận/Huyện..." value="{{$district_id}}">
                     </div>
                     <div class="col-md-6">
                         <label for="city">Tỉnh/Thành</label>
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Tỉnh/Thành..." value="{{$city}}">
+                        <input type="text" class="form-control" id="city" name="city_id" placeholder="Tỉnh/Thành..." value="{{$city_id}}">
                     </div>
                 </div>
             </div>
