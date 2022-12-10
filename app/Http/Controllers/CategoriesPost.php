@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 session_start();
-
+//thuong
 class CategoriesPost extends Controller
 {
     public function AuthLogin() { //Kiểm tra đăng nhập Admin
