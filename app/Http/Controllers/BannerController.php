@@ -36,6 +36,7 @@ class BannerController extends Controller {
         return view('admin.banner.add_slider');
     }
 
+
     public function insert_slider(Request $request) {
 
         $this->AuthLogin(); //Gọi hàm kiểm tra đăng nhập
