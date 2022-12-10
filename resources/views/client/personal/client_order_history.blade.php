@@ -14,6 +14,7 @@
   $status = session('status');
   Session::put('status',null);
 
+  
   foreach ($city as $key => $ci) {
   	if($ci->matp == $city_id) $city_name = $ci->name_city;
   }

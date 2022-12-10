@@ -46,6 +46,7 @@
                                             }
                                             ?>
                                         </p>
+                                        
                                         <button type="submit" class="btn btn-warning btn-user btn-block">Đăng kí</button>
                                     </form>
                                     <hr>

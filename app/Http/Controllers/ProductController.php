@@ -20,6 +20,7 @@ class ProductController extends Controller
         }
     }
 
+    
     public function add_product() {
         $this->AuthLogin(); //Gọi hàm kiểm tra đăng nhập
         $cate_product = DB::table('categories_product')->orderBy('category_id', 'desc')->get();

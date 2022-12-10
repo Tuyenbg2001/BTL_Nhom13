@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 <div class="wrap-categories">
     @foreach($category_name as $key => $name)
     <div class="row">

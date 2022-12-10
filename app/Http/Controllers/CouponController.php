@@ -24,6 +24,7 @@ class CouponController extends Controller
         $coupon->coupon_number = $data['coupon_number'];
         $coupon->save();
         
+        
         Session::put('message', 'Thêm mã giảm giá thành công');
         return Redirect::to('list-coupon');
     }

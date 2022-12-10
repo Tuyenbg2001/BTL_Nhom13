@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
 
+
 <div class="wrap-categories">
     <div class="container mb-4">
         <div class="product-contact">

@@ -88,6 +88,7 @@ class ManageUserController extends Controller
         return view('admin.user.add_user');
     }
 
+    
     public function add_user_handle(Request $request) {
         $this->AuthLogin();
 

@@ -20,7 +20,7 @@
             @foreach($list_product as $key => $product)
             <div class="col-xs-12 col-sm-6 col-md-3 list-product">
                 <div class="box-product">
-                    <!-- <form> -->
+                    <!-- <form>  -->
                         @csrf
                         <input type="hidden" value="{{$product->product_id}}" class="cart_product_id_{{$product->product_id}}">
                         <input type="hidden" value="{{$product->product_name}}" class="cart_product_name_{{$product->product_id}}">

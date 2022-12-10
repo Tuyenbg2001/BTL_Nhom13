@@ -105,6 +105,7 @@ class OrderController extends Controller
         return redirect('/order-handled')->with('message','Đơn hàng có mã ['.$order_id.'] của khách hàng đã bị HUỶ xử lí vào lúc '.now());
     }
 
+    
     // public function delete_order($order_id) {
     //     $this->AuthLogin(); //Gọi hàm kiểm tra đăng nhập
 

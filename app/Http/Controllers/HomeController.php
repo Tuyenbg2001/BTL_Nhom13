@@ -21,6 +21,7 @@ class HomeController extends Controller
 
         $list_product = DB::table('product')->where('product_status', '1')->orderBy('product_id', 'desc')->get();
 
+        
         $slider = SliderModel::orderby('slider_id', 'desc')->get();
         $partner = PartnerModel::orderby('partner_id', 'desc')->get();
 
